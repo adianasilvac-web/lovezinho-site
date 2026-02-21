@@ -1,119 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Eu Te Amo 💖</title>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #ffc0cb, #ff69b4);
-  font-family: "Comic Sans MS", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
 
-.container {
-  width: 90%;
-  max-width: 420px;
-  text-align: center;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 25px;
-  padding: 25px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff7eb3, #ff4f9a);
+    padding: 20px;
+  }
 
-h1 {
-  color: white;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 24px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    animation: subir 0.6s ease;
+  }
 
-.galeria {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
+  @keyframes subir {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-.galeria img {
-  width: 30%; /* 3 cabem perfeitamente na tela */
-  border-radius: 18px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s;
-  animation: flutuar 3s ease-in-out infinite;
-}
+  h1 {
+    color: #ff4f9a;
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
 
-.galeria img:nth-child(2) { animation-delay: 0.2s; }
-.galeria img:nth-child(3) { animation-delay: 0.4s; }
+  .subtitle {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 22px;
+  }
 
-.galeria img:hover {
-  transform: scale(1.1);
-}
+  .hello-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
 
-@keyframes flutuar {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
+  .hello-row img {
+    width: 80px;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    transition: 0.25s;
+  }
 
-button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  background: white;
-  color: #ff1493;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  .hello-row img:hover {
+    transform: scale(1.08);
+  }
 
-button:hover {
-  background: #ff1493;
-  color: white;
-}
+  button {
+    background: linear-gradient(135deg, #ff4f9a, #ff7eb3);
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 10px 20px rgba(255,79,154,0.35);
+  }
 
-#mensagem {
-  display: none;
-  margin-top: 20px;
-  font-size: 20px;
-  color: white;
-  animation: aparecer 0.8s ease-in-out;
-}
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(255,79,154,0.45);
+  }
 
-@keyframes aparecer {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
-}
+  .mensagem {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ff4f9a;
+    font-weight: 600;
+    display: none;
+    animation: aparecer 0.5s ease;
+  }
+
+  @keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* 📱 ajuste extra para telas pequenas */
+  @media (max-width: 380px) {
+    h1 {
+      font-size: 24px;
+    }
+
+    .hello-row img {
+      width: 70px;
+    }
+  }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <h1>Eu Te Amo 💖</h1>
+  <div class="card">
+    <h1>Eu te amo 💖</h1>
+    <div class="subtitle">Você é o amor da minha vida ✨</div>
 
-  <div class="galeria">
-    <img src="hellokitty1.png" alt="Hello Kitty 1">
-    <img src="hellokitty2.png" alt="Hello Kitty 2">
-    <img src="hellokitty3.png" alt="Hello Kitty 3">
+    <div class="hello-row">
+      <img src="https://i.imgur.com/1Xq9BiD.png" />
+      <img src="https://i.imgur.com/Qp7VY6K.png" />
+      <img src="https://i.imgur.com/8Km9tLL.png" />
+    </div>
+
+    <button onclick="mostrarMensagem()">Clique aqui 💌</button>
+
+    <div class="mensagem" id="msg">
+      Pra sempre nós dois 💞
+    </div>
   </div>
-
-  <button onclick="mostrarMensagem()">Clique aqui 💌</button>
-
-  <div id="mensagem">
-    Você é o amor da minha vida 💕✨
-  </div>
-</div>
 
 <script>
 function mostrarMensagem() {
-  document.getElementById("mensagem").style.display = "block";
+  document.getElementById("msg").style.display = "block";
 }
 </script>
 
