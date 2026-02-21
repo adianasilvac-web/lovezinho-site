@@ -12,7 +12,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  background: linear-gradient(to bottom, #c084fc, #7e22ce);
+  background: linear-gradient(to bottom, #d8b4fe, #9333ea);
   font-family: "Comic Sans MS", cursive;
   color:white;
 }
@@ -97,7 +97,9 @@ button:hover{
 
 <script>
 function mostrarMensagem(){
-  document.getElementById("mensagem").style.display = "block";
+  const msg = document.getElementById("mensagem");
+  msg.innerHTML = "Você é o amor da minha vida 💜✨<br>Nós duas, juntas, pra sempre 🌈💕";
+  msg.style.display = "block";
 }
 </script>
 
