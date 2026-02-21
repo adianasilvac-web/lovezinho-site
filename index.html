@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eu te amo 💖</title>
+<title>Eu te amo 💜</title>
 
 <style>
 body{
@@ -12,7 +12,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  background: linear-gradient(to bottom, #ffd1e6, #ff64ad);
+  background: linear-gradient(to bottom, #c084fc, #7e22ce);
   font-family: "Comic Sans MS", cursive;
   color:white;
 }
@@ -21,7 +21,7 @@ body{
   width:90%;
   max-width:420px;
   text-align:center;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(10px);
   border-radius:25px;
   padding:25px;
@@ -52,13 +52,13 @@ button{
   border:none;
   border-radius:30px;
   background:white;
-  color:#ff1493;
+  color:#7e22ce;
   cursor:pointer;
   transition:0.3s;
 }
 
 button:hover{
-  background:#ff1493;
+  background:#7e22ce;
   color:white;
 }
 
@@ -66,6 +66,12 @@ button:hover{
   display:none;
   margin-top:20px;
   font-size:20px;
+  animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer{
+  from{ opacity:0; transform:translateY(10px);}
+  to{ opacity:1; transform:translateY(0);}
 }
 </style>
 </head>
@@ -73,7 +79,7 @@ button:hover{
 <body>
 
 <div class="card">
-  <h1>Eu te amo 💖</h1>
+  <h1>Eu te amo 💜</h1>
 
   <div class="galeria">
     <img src="hellokitty1.png" alt="Hello Kitty 1">
@@ -84,7 +90,8 @@ button:hover{
   <button onclick="mostrarMensagem()">Clique aqui 💌</button>
 
   <div id="mensagem">
-    Você é o amor da minha vida 💕✨
+    Você é o amor da minha vida 💜✨<br>
+    Nós duas, juntas, pra sempre 💕
   </div>
 </div>
 
