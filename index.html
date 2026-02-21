@@ -2,166 +2,86 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Lovezinho</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eu Te Amo 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(#ffb6c1, #ffc0cb);
+    padding: 0;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(to bottom, #ffd6ec, #ffb6d9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     overflow: hidden;
     text-align: center;
 }
 
-/* Tela inicial cinema */
-.intro {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 40px;
-    animation: fadeOut 4s forwards;
-    animation-delay: 3s;
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-/* Conteúdo principal */
 .container {
-    margin-top: 100px;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(255,105,180,0.5);
+    max-width: 400px;
 }
 
 h1 {
-    font-size: 50px;
-    color: #ff1493;
+    font-size: 40px;
+    color: #ff4da6;
 }
 
-/* Botão */
+img {
+    width: 200px;
+    margin: 20px 0;
+}
+
 button {
-    background: #ff69b4;
+    background: #ff4da6;
     border: none;
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
     color: white;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
+    background: #ff1a8c;
     transform: scale(1.1);
 }
 
-/* Carta */
-.carta {
+#mensagem {
     display: none;
-    margin-top: 40px;
-    font-size: 60px;
+    margin-top: 20px;
+    font-size: 22px;
     color: #ff1493;
-    animation: aparecer 2s;
-}
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Hello Kitty imagens */
-.kitty {
-    position: absolute;
-    width: 120px;
-    animation: flutuar 6s infinite linear;
-}
-
-@keyframes flutuar {
-    from {
-        transform: translateY(100vh);
-    }
-    to {
-        transform: translateY(-120px);
-    }
-}
-
-/* corações */
-.heart {
-    position: absolute;
-    color: red;
-    font-size: 20px;
-    animation: subir 5s linear infinite;
-}
-
-@keyframes subir {
-    from {
-        transform: translateY(100vh);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-10vh);
-        opacity: 0;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Música -->
-<audio id="musica" autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_5a2c0f9c6d.mp3" type="audio/mp3">
-</audio>
-
-<!-- Intro estilo cinema -->
-<div class="intro">
-    Lovezinho 💕
-</div>
-
 <div class="container">
-    <h1>Lovezinho</h1>
+    <h1>Eu Te Amo 💕</h1>
 
-    <button onclick="abrirCarta()">Abrir a carta</button>
+    <img src="https://i.imgur.com/2RXYj6G.png" alt="Hello Kitty">
 
-    <div class="carta" id="carta">
-        TE AMO ❤️
+    <button onclick="mostrarMensagem()">Clique aqui 🎀</button>
+
+    <div id="mensagem">
+        Você é o amor da minha vida 💖✨
     </div>
 </div>
 
-<!-- Hello Kitty imagens -->
-<img class="kitty" style="left:10%" src="https://i.imgur.com/OYVpe2W.png">
-<img class="kitty" style="left:80%" src="https://i.imgur.com/OYVpe2W.png">
-
 <script>
-function abrirCarta() {
-    document.getElementById("carta").style.display = "block";
+function mostrarMensagem() {
+    document.getElementById("mensagem").style.display = "block";
 }
-
-/* corações caindo */
-setInterval(() => {
-    let heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤";
-    heart.style.left = Math.random() * 100 + "vw";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
-}, 300);
 </script>
 
 </body>
