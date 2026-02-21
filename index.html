@@ -1,90 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eu Te Amo 💖</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Pacifico', cursive;
-    background: linear-gradient(to bottom, #ffd6ec, #ffb6d9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    text-align: center;
-}
-
-.container {
-    background: white;
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 0 30px rgba(255,105,180,0.5);
-    max-width: 400px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffc0cb, #ff69b4);
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  overflow-x: hidden;
 }
 
 h1 {
-    font-size: 40px;
-    color: #ff4da6;
+  margin-top: 40px;
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
-img {
-    width: 200px;
-    margin: 20px 0;
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.galeria img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+  transition: transform 0.4s, box-shadow 0.4s;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+.galeria img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }
 
 button {
-    background: #ff4da6;
-    border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+  margin-top: 40px;
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff1493;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-    background: #ff1a8c;
-    transform: scale(1.1);
+  background: #ff1493;
+  color: white;
+  transform: scale(1.1);
 }
 
 #mensagem {
-    display: none;
-    margin-top: 20px;
-    font-size: 22px;
-    color: #ff1493;
+  display: none;
+  margin-top: 30px;
+  font-size: 28px;
+  color: white;
+  animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Eu Te Amo 💕</h1>
+<h1>Eu Te Amo 💖</h1>
 
-   <div class="galeria">
+<div class="galeria">
   <img src="hellokitty1.png" alt="Hello Kitty 1">
   <img src="hellokitty2.png" alt="Hello Kitty 2">
   <img src="hellokitty3.png" alt="Hello Kitty 3">
 </div>
 
-    <button onclick="mostrarMensagem()">Clique aqui 🎀</button>
+<button onclick="mostrarMensagem()">Clique aqui 💌</button>
 
-    <div id="mensagem">
-        Você é o amor da minha vida 💖✨
-    </div>
+<div id="mensagem">
+  Você é o amor da minha vida 💕✨
 </div>
 
 <script>
 function mostrarMensagem() {
-    document.getElementById("mensagem").style.display = "block";
+  document.getElementById("mensagem").style.display = "block";
 }
 </script>
 
